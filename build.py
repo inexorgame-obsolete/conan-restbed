@@ -14,9 +14,9 @@ if __name__ == "__main__":
                 platform.system() == "Linux" or
                 platform.system() == "Darwin"
             ):
-            filtered_builds.append([settings, dict(options.items() + [('restbed:ssl', False)]), env_vars, build_requires])
-            filtered_builds.append([settings, dict(options.items() + [('restbed:ssl', True)]), env_vars, build_requires])
-    print "filtered_builds="
-    print filtered_builds
+            filtered_builds.append([settings, {**options, **{'restbed:ssl': False}}, env_vars, build_requires])
+            filtered_builds.append([settings, {**options, **{'restbed:ssl': True}}, env_vars, build_requires])
+    print ("filtered_builds=")
+    print (filtered_builds)
     builder.builds = filtered_builds
     builder.run()
