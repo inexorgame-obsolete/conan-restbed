@@ -1,4 +1,4 @@
-[![badge](https://img.shields.io/badge/conan.io-restbed%2Fnext-green.svg?logo=data:image/png)](http://www.conan.io/source/restbed/next/nunojpg/ci)
+[![Download](https://api.bintray.com/packages/nunojpg/conan-repo/restbed%3Anunojpg/images/download.svg)](https://bintray.com/nunojpg/conan-repo/restbed%3Anunojpg/_latestVersion)
 [![Build Status](https://travis-ci.org/nunojpg/conan-restbed.svg?branch=master)](https://travis-ci.org/nunojpg/conan-restbed)
 [![Build status](https://ci.appveyor.com/api/projects/status/d3m9un5jlbvd174f/branch/master?svg=true)](https://ci.appveyor.com/project/nunojpg/conan-restbed/branch/master)
 
