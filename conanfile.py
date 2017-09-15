@@ -24,7 +24,7 @@ class RestbedConan(ConanFile):
 
     def requirements(self):
         if self.options.ssl:
-            self.requires.add('OpenSSL/1.0.2k@lasote/stable', private=False)
+            self.requires.add('OpenSSL/1.0.2l@conan/stable', private=False)
         else:
             if 'OpenSSL' in self.requires:
                 del self.requires['OpenSSL']
