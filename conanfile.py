@@ -44,8 +44,8 @@ class RestbedConan(ConanFile):
         self.copy('*.hpp', dst='include', src='restbed/source')
         self.copy('librestbed.a', dst='lib', src='lib')
         self.copy('restbed.lib', dst='lib', src='lib')
-        self.copy('librestbed.so*', dst='lib')
-        self.copy('librestbed*dylib', dst='lib')
+        self.copy('librestbed.so*', dst='lib', src='lib')
+        self.copy('librestbed*dylib', dst='lib', src='lib')
         
     def package_info(self):
         self.cpp_info.libs = ['restbed']
