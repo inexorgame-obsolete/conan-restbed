@@ -1,3 +1,4 @@
+import os
 from conans import ConanFile, CMake, tools
 
 class RestbedConan(ConanFile):
@@ -16,6 +17,8 @@ class RestbedConan(ConanFile):
     generators = 'cmake'
 
     def source(self):
+        if 'CONAN_RUNNER_ENCODED' in os.environ:    #conan package tools linux docker build
+            os.environ['GIT_SSL_NO_VERIFY'] = 'true'
         self.run('git clone --depth 1 https://github.com/Corvusoft/restbed')
         self.run('cd restbed && git submodule update --depth 1 --init dependency/kashmir')
         tools.replace_in_file('restbed/CMakeLists.txt', 'project( restbed CXX )', '''project( restbed CXX )
